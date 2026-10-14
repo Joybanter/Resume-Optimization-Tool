@@ -1,0 +1,244 @@
+/* 简历优化工具 — 全局样式表（PRD 5 界面设计） */
+
+/* ---------- 基础 ---------- */
+QWidget {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+QMainWindow, QDialog {
+    background: #f7f8fa;
+}
+
+/* ---------- 标题 ---------- */
+#appTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+#appSubtitle {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* ---------- 按钮 ---------- */
+QPushButton {
+    border-radius: 8px;
+    padding: 8px 18px;
+    min-height: 22px;
+}
+
+#primaryButton {
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+}
+#primaryButton:hover {
+    background: #1d4ed8;
+}
+#primaryButton:pressed {
+    background: #1e40af;
+}
+#primaryButton:disabled {
+    background: #93c5fd;
+    color: #e5e7eb;
+}
+
+#secondaryButton {
+    background: #ffffff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+#secondaryButton:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+#secondaryButton:disabled {
+    color: #9ca3af;
+    border-color: #e5e7eb;
+}
+
+/* ---------- 分组框 ---------- */
+QGroupBox {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-top: 14px;
+    padding-top: 6px;
+    font-weight: 600;
+    color: #374151;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 14px;
+    padding: 0 6px;
+    color: #2563eb;
+}
+
+/* ---------- 输入控件 ---------- */
+QLineEdit, QPlainTextEdit, QTextBrowser, QComboBox {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 6px 10px;
+    selection-background-color: #2563eb;
+}
+QLineEdit:focus, QPlainTextEdit:focus, QComboBox:focus {
+    border-color: #2563eb;
+}
+
+QPlainTextEdit {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#jdCountLabel {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+/* ---------- 拖拽上传区 ---------- */
+#dropZone {
+    background: #f8fafc;
+    border: 2px dashed #93c5fd;
+    border-radius: 12px;
+}
+#dropZone[loaded="true"] {
+    background: #f0fdf4;
+    border: 2px dashed #4ade80;
+}
+#dropZone:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+/* ---------- 尺度选择 ---------- */
+#levelRadio {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 8px;
+    spacing: 8px;
+    text-align: center;
+}
+#levelRadio::indicator {
+    width: 18px;
+    height: 18px;
+}
+#levelRadio:checked {
+    background: #eff6ff;
+    border: 1px solid #2563eb;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+/* ---------- 进度对话框 ---------- */
+#progressTitle {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+}
+#progressStep {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+QProgressBar {
+    border: none;
+    background: #e5e7eb;
+    border-radius: 8px;
+    min-height: 14px;
+    text-align: center;
+    color: #1f2937;
+    font-size: 12px;
+}
+QProgressBar::chunk {
+    background: #2563eb;
+    border-radius: 8px;
+}
+
+/* ---------- 预览窗口 ---------- */
+#previewHeader {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+#previewStats {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ---------- 表格（历史记录） ---------- */
+QTableWidget {
+    background: #ffffff;
+    alternate-background-color: #f9fafb;
+    gridline-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+QHeaderView::section {
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+    padding: 8px 6px;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ---------- 状态栏 ---------- */
+QStatusBar {
+    background: #f3f4f6;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+    font-size: 12px;
+}
+
+/* ---------- 滚动条 ---------- */
+QScrollBar:vertical {
+    background: #f1f2f4;
+    width: 10px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical {
+    background: #c7ccd1;
+    border-radius: 5px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #a8b0b8;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ---------- 左上角帮助按钮（圆形问号） ---------- */
+#helpButton {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    padding: 0;
+}
+#helpButton:hover {
+    background: #1d4ed8;
+}
+#helpButton:pressed {
+    background: #1e40af;
+}
+
+/* ---------- 新手指引 ---------- */
+#onboardingTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
